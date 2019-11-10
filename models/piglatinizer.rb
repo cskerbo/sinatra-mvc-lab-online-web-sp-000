@@ -6,19 +6,15 @@ class PigLatinizer
    @user_phrase = user_phrase
  end
 
- def piglatinize(word=nil)
-   individual_word = user_phrase.split(" ")
-   latinized_word = individual_word.map {|word| piglatinize_word(word)}
-   latinized_word.join(" ")
- end
+def piglatinize(word)
 
-def piglatinize_word(word)
+  individual_word = word.split(" ")
 
-  first_letter = word[0].downcase
-
-  if ["a", "e", "i", "o", "u"].include?(first_letter)
-    word + "way"
-  else
+  latinized_word= individual_word.map do |word|
+    first_letter = word[0].downcase
+    if ["a", "e", "i", "o", "u"].include?(first_letter)
+      word + "way"
+    else
       consonants = []
       consonants << word[0]
         if ["a", "e", "i", "o", "u"].include?(word[1]) == false
@@ -29,6 +25,7 @@ def piglatinize_word(word)
         end
       word[consonants.length..-1] + consonants.join + "ay"
     end
+    latinized_word.join(" ")
   end
 
 end
