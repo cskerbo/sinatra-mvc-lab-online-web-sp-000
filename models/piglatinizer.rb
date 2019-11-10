@@ -6,7 +6,7 @@ class PigLatinizer
    @user_phrase = user_phrase
  end
 
-def piglatinize(user_phrase=nil)
+def piglatinize
     individual_word = user_phrase.split(" ")
     latinized_word = individual_word.map do |word|
       first_letter = word[0].downcase
