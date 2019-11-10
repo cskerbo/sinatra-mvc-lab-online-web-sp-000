@@ -27,5 +27,6 @@ def piglatinize(word)
     end
     latinized_word.join(" ")
   end
+end
 
 end
