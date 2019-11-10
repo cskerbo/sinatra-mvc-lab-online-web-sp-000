@@ -2,13 +2,13 @@ class PigLatinizer
 
  attr_accessor :user_phrase
 
- def initialize(user_phrase=nil)
+ def initialize(user_phrase='nil')
    @user_phrase = user_phrase
  end
 
 def piglatinize
     individual_word = @user_phrase.split(" ")
-    latinized_word= individual_word.map do |word|
+    latinized_word = individual_word.map do |word|
       first_letter = word[0].downcase
       if ["a", "e", "i", "o", "u"].include?(first_letter)
         "#{word}way"
