@@ -2,14 +2,14 @@ class PigLatinizer
 
  attr_accessor :user_phrase
 
- def initialize(user_phrase=nil)
+ def initialize(user_phrase)
    @user_phrase = user_phrase
  end
 
 def piglatinize
 
-  if user_phrase.count > 1
-    individual_word = user_phrase.split(" ")
+  if @user_phrase.count > 1
+    individual_word = @user_phrase.split(" ")
   else
     individual_word = user_phrase
   end
