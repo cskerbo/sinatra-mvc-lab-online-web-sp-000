@@ -23,8 +23,8 @@ def piglatinize
           end
         word[consonants.length..-1] + consonants.join + "ay"
       end
-      latinized_word.join(" ")
     end
+    latinized_word.join(" ")
 end
 
 end
