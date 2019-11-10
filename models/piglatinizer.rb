@@ -2,7 +2,7 @@ class PigLatinizer
 
  attr_accessor :user_phrase
 
- def initialize)
+ def initialize
    @user_phrase = user_phrase
  end
 
