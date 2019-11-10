@@ -4,7 +4,7 @@ class PigLatinizer
 
 @@all = []
 
- def initialize(user_phrase)
+ def initialize(user_phrase=nil)
    @user_phrase = user_phrase.downcase
    @@all << self
  end
