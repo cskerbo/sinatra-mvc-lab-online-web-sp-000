@@ -2,8 +2,11 @@ class PigLatinizer
 
  attr_accessor :user_phrase
 
+@@all = []
+
  def initialize(user_phrase)
    @user_phrase = user_phrase.downcase
+   @@all << self
  end
 
 def piglatinize
