@@ -6,7 +6,7 @@ class PigLatinizer
    @user_phrase = user_phrase
  end
 
-def piglatinize(word)
+def piglatinize(word=nil)
 
   individual_word = word.split(" ")
 
